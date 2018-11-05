@@ -26,9 +26,7 @@ class SendMail:
             self.mail.attach(part)
 
         self._send = send
-        self.mail['From'] = self._send
         self._receiver = receiver
-        self.mail['To'] = ', '.join(self._receiver)
 
     def set_header(self, send_header=None, receiver_header=None):
         if send_header is not None:
